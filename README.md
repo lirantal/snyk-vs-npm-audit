@@ -36,6 +36,10 @@ and are deemed problematic for a security tool:
 
 ## Hidden benefits of using Snyk
 
+| Snyk Capability       |    The Benefit    |    Description
+| -------------         | :---------------: | :---------------: 
+| ✅ Multi-language     | Teams of different languages and platforms can use the same security tool | Support for more than just JavaScript includes Java, Python, Go, Ruby, PHP, .NET and others and  
+
 
 # Author
 
