@@ -29,18 +29,47 @@ The following are a list of cases and experiences which have been observed with 
 and are deemed problematic for a security tool:
 
 - [1 npm audit reports false positives](#1-npm-audit-reports-false-positives)
-- [tbd](#tbd)
-- [tbd](#tbd)
+- [2 npm audit reports false negatives](#2-npm-audit-reports-false-negatives)
+- [3 npm audit doesnt report vulnerabilities for special versions](#3-npm-audit-doesnt-report-vulnerabilities-for-special-versions)
+
+---
 
 ### 1 npm audit reports false positives
 
-❌ **Case**: npm audit reports false positives in such a way that packages that were once vulnerable but later in the future received a fix, are still reported as vulnerable across versions. npm fails to stay up to date with patches applied to libraries and ends up completely missing out on them.
+❌ **Case**: npm audit reports false positives in such a way that packages that were once vulnerable but later
+in the future received a fix, are still reported as vulnerable across versions. 
+npm fails to stay up to date with patches applied to libraries and ends up completely missing out on them.
 
-👉 **Example**: https://github.com/pillys/fs-path/pull/5
+👉 **Example**: [fs-path](https://github.com/pillys/fs-path/pull/5)
 
-✅ **The Snyk case**: Snyk’s security analysts are always monitoring vulnerable packages for new releases, and manually triage them for fixes or other updates that are significantly impacting the state of the package or vulnerability.
+✅ **The Snyk case**: Snyk’s security analysts are always monitoring vulnerable packages for new releases, 
+and manually triage them for fixes or other updates that are significantly impacting the state of the package or vulnerability.
 
+---
 
+### 2 npm audit reports false negatives
+
+❌ **Case**: npm audit reports false positives for packages, meaning that while a library has been detected to be vulnerable by Snyk,
+npm audit hasn't caught up with this vulnerability and won't report it as vulnerable.
+
+👉 **Example**: [react-json-pretty](https://snyk.io/advisor/npm-package/react-json-pretty)
+
+✅ **The Snyk case**: [react-json-pretty has been vulnerable since 2019](https://security.snyk.io/package/npm/react-json-pretty) which
+Snyk detected at that time, yet 4 years later both `npm audit` and `osv.dev` still don't report as vulnerable.
+
+---
+
+### 3 npm audit doesnt report vulnerabilities for special versions
+
+❌ **Case**: npm audit won’t report vulnerabilities for versions which aren't semver, so a vulnerable or malicious version such as
+`myPackage@1.2.3-pre` will not show up anything during an `npm audit` analysis. This is due to the fact that semver is strict `X.Y.Z`
+numeric format.
+
+👉 **Example**: See [evidence source](https://jfrog.com/blog/invisible-npm-malware-evading-security-checks-with-crafted-versions)
+
+✅ **The Snyk case**: Snyk will report vulnerabilities, regardless of the version format used.
+
+---
 
 ## Hidden benefits of using Snyk
 
