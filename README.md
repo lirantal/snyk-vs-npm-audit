@@ -38,7 +38,8 @@ and are deemed problematic for a security tool:
 
 | Snyk Capability       |    The Benefit    |    Description
 | -------------         | :---------------: | :---------------: 
-| ✅ Multi-language     | Teams of different languages and platforms can use the same security tool | Support for more than just JavaScript includes Java, Python, Go, Ruby, PHP, .NET and others and  
+| ✅ Multi-language     | Teams of different languages and platforms can use the same security tool | Support for more than just JavaScript includes Java, Python, Go, Ruby, PHP, .NET and others.
+| ✅ Full SDLC          | `npm audit` is a CLI command where-as Snyk is consumable with `snyk` CLI, native Git integration for webhooks and CI checks, and IDE plugins | Integrations exist across mutliple Git SCMs, IDEs, cloud vendors such as GCP, GKE, AWS and Azure's services included, Docker Hub, etc.
 
 
 # Author
