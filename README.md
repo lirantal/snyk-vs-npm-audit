@@ -23,15 +23,23 @@ Sources and references:
 | Item | Item | Item
 
 
-
 ## Observed issues with npm audit
 
 The following are a list of cases and experiences which have been observed with using npm audit
 and are deemed problematic for a security tool:
 
-- TBD
-- TBD
-- TBD
+- [1 npm audit reports false positives](#1-npm-audit-reports-false-positives)
+- [tbd](#tbd)
+- [tbd](#tbd)
+
+### 1 npm audit reports false positives
+
+❌ **Case**: npm audit reports false positives in such a way that packages that were once vulnerable but later in the future received a fix, are still reported as vulnerable across versions. npm fails to stay up to date with patches applied to libraries and ends up completely missing out on them.
+
+👉 **Example**: https://github.com/pillys/fs-path/pull/5
+
+✅ **The Snyk case**: Snyk’s security analysts are always monitoring vulnerable packages for new releases, and manually triage them for fixes or other updates that are significantly impacting the state of the package or vulnerability.
+
 
 
 ## Hidden benefits of using Snyk
