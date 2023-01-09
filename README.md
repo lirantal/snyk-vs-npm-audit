@@ -6,10 +6,14 @@ are entirely based on my own personal experience.
 
 ## About Snyk and npm audit
 
-| About Snyk    | About npm audit |
-| ------------- | --------------- |
-| TBD | TBD
-| TBD | TBD
+|       Tool      | Background     
+| :-------------: | -------------- 
+| About Snyk      | [Snyk](https://snyk.io) is a developer-first security company, providing free and commercial developer tooling and platform to find and fix security vulnerabilities in code, dependencies, container images, and infrastructure as code
+| About npm audit | [npm](https://docs.npmjs.com/about-npm) is the open source package manager and [public registry](https://www.npmjs.com) for JavaScript packages. The npm package manager includes a built-in security tool in the form of the `npm audit` command which submits a description of the dependencies configured in your project to the npm registry and asks for a report of known vulnerabilities. If any vulnerabilities are found, then the impact and appropriate remediation will be calculated.
+
+Sources and references:
+- [Snyk website](https://snyk.io)
+- [npm-audit command](https://docs.npmjs.com/cli/v9/commands/npm-audit)
 
 ## Snyk vs npm audit Capabilities comparison
 
@@ -28,6 +32,10 @@ and are deemed problematic for a security tool:
 - TBD
 - TBD
 - TBD
+
+
+## Hidden benefits of using Snyk
+
 
 # Author
 
