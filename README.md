@@ -42,8 +42,23 @@ npm fails to stay up to date with patches applied to libraries and ends up compl
 
 👉 **Example**: [fs-path](https://github.com/pillys/fs-path/pull/5)
 
+❌ **Case**: Dependabot & npm audit both reported a vulnerable `glob-parent@5.1.2` which isn't true, but due
+to the large noise created with Dependabot also alerting on this, maintainers were frustrated to receive
+alerts to their upstream projects, like `chokidar`.
+
+Dependabot mis-classifying `glob-parent@5.1.2` as vulnerable:
+
+<img src="https://user-images.githubusercontent.com/316371/211521032-02e582f0-3257-4344-95c5-505189615516.png" height="500" />
+
+Snyk properly finding that version as not vulnerable:
+
+<img src="https://user-images.githubusercontent.com/316371/211521208-96ec6acb-581d-4ff4-972c-8fcbeae1777e.png" height="500" />
+
+
 ✅ **The Snyk case**: Snyk’s security analysts are always monitoring vulnerable packages for new releases, 
 and manually triage them for fixes or other updates that are significantly impacting the state of the package or vulnerability.
+
+
 
 ---
 
@@ -69,7 +84,6 @@ numeric format.
 
 ✅ **The Snyk case**: Snyk will report vulnerabilities, regardless of the version format used.
 
----
 
 ## Hidden benefits of using Snyk
 
