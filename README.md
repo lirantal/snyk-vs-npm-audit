@@ -32,6 +32,7 @@ and are deemed problematic for a security tool:
 - [1 npm audit reports false positives](#1-npm-audit-reports-false-positives)
 - [2 npm audit reports false negatives](#2-npm-audit-reports-false-negatives)
 - [3 npm audit doesnt report vulnerabilities for special versions](#3-npm-audit-doesnt-report-vulnerabilities-for-special-versions)
+- [4 npm audit scans devDependencies by default](4-npm-audit-scans-devDependencies-by-default)
 
 ---
 
@@ -85,6 +86,23 @@ numeric format.
 
 ✅ **The Snyk case**: Snyk will report vulnerabilities, regardless of the version format used.
 
+---
+
+### 4 npm audit scans devDependencies by default
+
+❌ **Case**: npm audit will, by default, scan and report security vulnerabilities in `devDependencies`.
+These are open source dependencies of a project that are only meant to be used during the development
+stage of an application, and are not deployed to production or part of a production assets bundling.
+
+👉 **Example**: Dan Abramov layed out several examples in his article [npm audit: Broken by Design](https://overreacted.io/npm-audit-broken-by-design/)
+which makes the case for why security issues may cause frustration and completely ignored by developers
+due to the fact that they practically don't pose any risk of exploitation, as mostly is the case with
+`devDependencies`.
+
+✅ **The Snyk case**: When the Snyk CLI `snyk test` runs, it by default ignores `devDependencies`
+and will only report security issues concerning production dependencies.
+
+---
 
 ## Hidden benefits of using Snyk
 
