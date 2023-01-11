@@ -17,10 +17,11 @@ Sources and references:
 
 ## Snyk vs npm audit Capabilities comparison
 
-| Capability    |       Snyk        |    npm audit    |
-| ------------- | :---------------: | :-------------: |
-| Item | Item | Item
-| Item | Item | Item
+| Capability    |       Snyk        |    npm audit    | Description
+| ------------- | :---------------: | :-------------: | :-------------:
+| CLI | ✅ | ✅ | A command-line interface tool to interact with
+| Monitoring | ✅ | ❌ | Store a snapshot of the dependency tree to continously monitor it for newly reported vulnerabilities
+
 
 
 ## Observed issues with npm audit
