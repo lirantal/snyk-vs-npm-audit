@@ -112,6 +112,10 @@ and will only report security issues concerning production dependencies.
 | ✅ Full SDLC          | `npm audit` is a CLI command where-as Snyk is consumable with `snyk` CLI, native Git integration for webhooks and CI checks, and IDE plugins | Integrations exist across mutliple Git SCMs, IDEs, cloud vendors such as GCP, GKE, AWS and Azure's services included, Docker Hub, etc.
 
 
+## Contributing
+
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
+
 # Author
 
 Liran Tal <liran.tal@gmail.com>
