@@ -69,7 +69,7 @@ and manually triage them for fixes or other updates that are significantly impac
 ❌ **Case**: npm audit reports false positives for packages, meaning that while a library has been detected to be vulnerable by Snyk,
 npm audit hasn't caught up with this vulnerability and won't report it as vulnerable.
 
-👉 **Example**: [react-json-pretty](https://snyk.io/advisor/npm-package/react-json-pretty)
+👉 **Example**: react-json-pretty
 
 ✅ **The Snyk case**: [react-json-pretty has been vulnerable since 2019](https://security.snyk.io/package/npm/react-json-pretty) which
 Snyk detected at that time, yet 4 years later both `npm audit` and `osv.dev` still don't report as vulnerable.
